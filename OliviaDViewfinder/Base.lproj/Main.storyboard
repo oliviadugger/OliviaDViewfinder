@@ -50,51 +50,61 @@
         <!--Add New Photo-->
         <scene sceneID="1AN-X8-U4v">
             <objects>
-                <viewController id="7JT-e8-Y8M" sceneMemberID="viewController">
+                <viewController id="7JT-e8-Y8M" customClass="AddPhotoViewController" customModule="OliviaDViewfinder" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iCe-0H-zZN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera-clip-art-40" translatesAutoresizingMaskIntoConstraints="NO" id="caX-kB-Lkv">
-                                <rect key="frame" x="16" y="93" width="334" height="280"/>
+                                <rect key="frame" x="20" y="93" width="334" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCL-Kh-6Xr">
+                                <rect key="frame" x="86" y="405" width="203" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
+                                <state key="normal" title="Save this photo">
+                                    <color key="titleColor" red="0.24311259388923645" green="0.24315303564071655" blue="0.24310377240180969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiZ-7Y-Vjn">
+                                <rect key="frame" x="55" y="482" width="107" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleColor" red="0.24311259388923645" green="0.24315303564071655" blue="0.24310377240180969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cameraTapped:" destination="7JT-e8-Y8M" eventType="touchUpInside" id="9Zx-gX-krm"/>
+                                    <action selector="takePhotoTapped:" destination="7JT-e8-Y8M" eventType="touchUpInside" id="08K-cT-jVW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSf-Ql-Q83">
+                                <rect key="frame" x="220" y="482" width="99" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
+                                <state key="normal" title="Library">
+                                    <color key="titleColor" red="0.24311259388923645" green="0.24315303564071655" blue="0.24310377240180969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="libraryTapped:" destination="7JT-e8-Y8M" eventType="touchUpInside" id="MWy-gw-bFY"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X1u-PI-cgK">
-                                <rect key="frame" x="69" y="343" width="239" height="30"/>
+                                <rect key="frame" x="55" y="374" width="239" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCL-Kh-6Xr">
-                                <rect key="frame" x="111" y="407" width="160" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
-                                <state key="normal" title="Save this photo">
-                                    <color key="titleColor" red="0.40225839614868164" green="0.91824454069137573" blue="0.88324564695358276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiZ-7Y-Vjn">
-                                <rect key="frame" x="66" y="477" width="81" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
-                                <state key="normal" title="Camera">
-                                    <color key="titleColor" red="0.40225839614868164" green="0.91824454069137573" blue="0.88324564695358276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSf-Ql-Q83">
-                                <rect key="frame" x="234" y="472" width="74" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
-                                <state key="normal" title="Library">
-                                    <color key="titleColor" red="0.40225839614868164" green="0.91824454069137573" blue="0.88324564695358276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="rfH-Cd-PCM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo" id="ga9-g1-B1B"/>
+                    <connections>
+                        <outlet property="imageView" destination="caX-kB-Lkv" id="OMo-Xt-aiF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="slR-Cm-dfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
