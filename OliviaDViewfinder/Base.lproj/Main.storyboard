@@ -13,7 +13,7 @@
         <!--OliviaViewFinder-->
         <scene sceneID="Emw-RZ-jnr">
             <objects>
-                <tableViewController id="eTQ-a7-7Sx" sceneMemberID="viewController">
+                <tableViewController id="eTQ-a7-7Sx" customClass="PostTableViewController" customModule="OliviaDViewfinder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KAg-Af-f7E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,6 +66,9 @@
                                 <state key="normal" title="Save this photo">
                                     <color key="titleColor" red="0.24311259388923645" green="0.24315303564071655" blue="0.24310377240180969" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="savePhotoTapped:" destination="7JT-e8-Y8M" eventType="touchUpInside" id="aNU-en-sku"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XiZ-7Y-Vjn">
                                 <rect key="frame" x="55" y="482" width="107" height="64"/>
@@ -103,6 +106,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo" id="ga9-g1-B1B"/>
                     <connections>
+                        <outlet property="captionText" destination="X1u-PI-cgK" id="u6m-H6-iPa"/>
                         <outlet property="imageView" destination="caX-kB-Lkv" id="OMo-Xt-aiF"/>
                     </connections>
                 </viewController>
